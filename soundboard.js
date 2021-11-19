@@ -1,31 +1,45 @@
-var getchampagne = document.getElementById(champagnesound)
-var getcough = document.getElementById(coughsound)
-var getwind = document.getElementById(windsound)
-var getblip = document.getElementById(blipsound)
 
-function champagne() {
-    getchampagne.play();
+function playchampagne() {
+    document.getElementById("champagnesound").play();
 
 }
-
-function cough() {
-    getcough.play();
-
+function playcough() {
+    document.getElementById("coughsound").play();
 }
 
-function wind() {
-    getwind.play();
-
+function playwind() {
+    document.getElementById("windsound").play();
 }
-function champagneenter() {
-    getblip.play();
 
+function playblip() {
+    document.getElementById("blipsound").play()
 }
-function coughenter() {
-    getblip.play();
 
-}
-function windenter() {
-    getblip.play();
+let champagnebutton = document.getElementById("champagne");
+let coughbutton = document.getElementById("cough");
+let windbutton = document.getElementById("wind");
 
+champagnebutton.onmouseenter = function () {
+    playblip();
 }
+
+champagnebutton.onclick = function () {
+    playchampagne();
+}
+
+coughbutton.onmouseenter = function () {
+    playblip();
+}
+
+coughbutton.onclick = function () {
+    playcough();
+}
+
+windbutton.onmouseenter = function () {
+    playblip();
+}
+
+windbutton.onclick = function () {
+    playwind();
+}
+
